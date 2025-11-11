@@ -1,0 +1,113 @@
+/* Reset and base style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #1f1f1f;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #00c6ff;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #aaa;
+}
+
+/* Notes layout */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.note-card {
+    background-color: #2a2a2a;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    width: 45%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.note-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+}
+
+.note-card h2 {
+    color: #00c6ff;
+    margin-bottom: 15px;
+}
+
+.note-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .note-card {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+}
+
+
+/* Watermark */
+.watermark {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+/* Footer signature */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 1rem;
+    color: #aaa;
+    opacity: 0.8;
+    padding: 15px 0;
+}
+
+footer span {
+    color: #00c6ff;
+    font-weight: bold;
+}
